@@ -52,10 +52,37 @@
 </div>
 
 <div id="maincontent">
-<div id="m1">
-<h2>Text</h2>
+<div id="m1"></div>
+<div id="m2">
+
+<h2>Audio</h2>
+<p>
+<span>Until you:</span>
+<audio controls="controls">
+<source src="../../media/audio1.mp3" type="audio/mpeg"></source>
+Your browser does not support HTML5 video.
+</audio>
+</p>
+
+<h2>Video</h2>
+<p><span>Bear1:</span></p>
+<p>
+<video  width="320"  height="240" controls="controls">
+<source src="../../media/movie.ogg" type="video/ogg"></source>
+Your browser does not support HTML5 video.
+</video>
+</p>
+
+<p><span>Bear2:</span></p>
+<p>
+<video  width="320"  height="240" controls="controls">
+<source src="../../media/mov_bbb.ogg" type="video/ogg"></source>
+Your browser does not support HTML5 video.
+</video>
+</p>
+
+
 </div>
-<div id="m2"></div>
 <div id="m3"></div>
 <div id="m4"></div>
 <div id="m5">

@@ -4,9 +4,9 @@
 
 <html>
 <head>
-<script type="text/javascript" src="../../jquery-3.2.1.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=GB18030">
 <link rel="stylesheet" type="text/css" href="../../style.css">
+<script type="text/javascript" src="../../jquery-3.2.1.js"></script>
 <title>文档系统</title>
 
 </head>
@@ -49,8 +49,8 @@
 <li class="sfdevelop"><a>Software Develop</a>
 <ul class="sfdevelop1" >
 <li><a href="richard_sfdevelop.jsp">Jquery</a></li>
-<li><a href="richard_sfdevelop.jsp">React</a></li>
 <li><a href="richard_sfdevelop.jsp">Angular</a></li>
+<li><a href="richard_sfdevelop.jsp">React</a></li>
 <li><a href="richard_sfdevelop.jsp">Java Server Page</a></li>
 </ul>
 </li>
@@ -63,7 +63,7 @@
 
 <div id="maincontent">
 <div id="m1">
-<h2>Animate</h2>
+<h2>Jquery Animate</h2>
 <div class="imageRotation">
 <div class="imageBox">
 <a href="richard_sfdevelop.jsp" ><img src="../../images/photos/richard/1.jpg" /></a>
@@ -148,7 +148,23 @@ $(document).ready(function(){
 
 </script>
 </div>
-<div id="m2"></div>
+<div id="m2">
+<h2>Video</h2>
+<p>
+<video  width="320"  height="320" controls="controls">
+<source src="../../media/video1.MP4" type="video/MP4"></source>
+Your browser does not support HTML5 video.
+</video>
+</p>
+<h2>Audio</h2>
+<p>
+<span>Until you:</span>
+<audio controls="controls">
+<source src="../../media/audio1.mp3" type="audio/mpeg"></source>
+Your browser does not support HTML5 video.
+</audio>
+</p>
+</div>
 <div id="m3"></div>
 <div id="m4"></div>
 <div id="m5">

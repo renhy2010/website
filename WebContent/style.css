@@ -30,12 +30,12 @@ div#wrapper{
 	border:0;
 	width:1239px;
 	text-align:left;
-	background:transparent url(images/bg_other.GIF) top left repeat-X ;
+	background:transparent url(images/wrapper_half.PNG) top left repeat-y ;
     
 }
 
 div#header{
-	margin:0,0,0,12px;
+	margin:0 0 0 12px;
 	padding:0;
 	border:0;
 	width:1210px;
@@ -73,7 +73,7 @@ div#header_second a{
 
 
 div#navfirst{
-	margin:0,0,0,12px;
+	margin:0 0 0 12px;
 	padding:0;
 	border:0;
 	width:1210px;
@@ -82,7 +82,7 @@ div#navfirst{
 }
 
 div#navfirst ul#menu{
-	margin:0,0,0,12px;
+	margin:0;
 	padding:0;
 	border:0;
 	width:1210px;
@@ -160,19 +160,20 @@ div#navfirst ul#menu a:active
 
 div#navsecond{
 	float:left;
-	margin:0;
+	margin:0 0 0 12px;
 	padding:0;
 	border:0;
-	width:180px;
+	width: 180px;
+	background: transparent;
 	
 }
 
 div#sidebar{
-	margin:30px 0 10px 0;
-	padding:25px 0 100px 0;
-	border:1px solid #d0d0d0;
-	background:transparent url(images/bg.jpg) repeat-X;
-	
+	margin:0 0 10px 0;
+	padding:60px 0 0 0;
+	border:0;	
+	background:transparent url(images/bg_navsecond.PNG) repeat-x;
+
 }
 
 div#sidebar h2{
@@ -234,19 +235,19 @@ div#navsecond ul a:active
 div#maincontent{
 	float:left;
 	margin:10px;
-	padding:30px 0 0 0;
+	padding:30px 0 0 20px;
 	border:0 solid #d0d0d0;
-	width:1020px;
+	width:1000px;
 	min-height:800px;
 }
 
 div#maincontent div{
 	margin:0 0 0 0;
-	padding:0;
+	padding:0 0 0 30px;
 	padding-bottom:0;
 	border:0;
 	border-bottom:1px solid #aaa;
-	width:980px;	
+	width:950px;	
 	min-height:200px;
 	
 }
@@ -311,6 +312,7 @@ div#m1 div.imageRotation div.icoBox{
 	cursor:default;
 }
 
+
 div#footer{
 	clear:both;
 	margin-top:30px;
@@ -330,6 +332,14 @@ h1 {
 
 h2,h3,h4,h5,h6{
 	font-weight:bold;
+}
+
+h1,p,span{
+	line-height:3;
+}
+
+span{
+	color:red;
 }
 
 HR {color:#ff8000;}
