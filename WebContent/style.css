@@ -1,7 +1,7 @@
 *{
 	margin:0;
 	padding:0;
-	border:0;
+
 }
 
 html{
@@ -18,7 +18,6 @@ body {
 	text-align:center;
 	margin:0;
 	padding:0;
-	border:0;
 	background:#fdfcf8;
 	font-family:PingFangSC-Regular, Verdana, Arial, 'Î¢ÈíÑÅºÚ','ËÎÌå';
 	font-size:14px;	
@@ -27,7 +26,6 @@ body {
 div#wrapper{
 	margin:0 auto;
 	padding:0;
-	border:0;
 	width:1239px;
 	text-align:left;
 	background:transparent url(images/wrapper_half.PNG) top left repeat-y ;
@@ -103,10 +101,10 @@ div#navfirst ul#menu li{
 ul#menu li,ul#menu a{
 	display:block;
 	height:48px;
-	border-bottom:0;
 	text-decoration:none;
-	
-}
+	text-align:center;
+	line-height:3;
+ }
 
 
 
@@ -114,29 +112,32 @@ ul#menu li,ul#menu a{
 div#navfirst ul#menu a:link
 {
 	display:block;
-	color:#000000;	
+	color:#000;	
 }
 div#navfirst ul#menu a:visited
 {
 	display:block;
-	color:#000000;	
+	color:#000;	
+	
 }
 div#navfirst ul#menu a:hover
 {
 	display:block;
-	color:#000000;
+	color:#000;
 	background:#aaaaaa;	
 }
 div#navfirst ul#menu a:active
 {
 	display:block;
-	color:#000000;	
+	color:#000;	
+		
 }
 
 #family{
 	left:0;
 	width:150px;
 	font-weight:bold;
+
 }
 
 #richard{
@@ -234,18 +235,16 @@ div#navsecond ul a:active
 
 div#maincontent{
 	float:left;
-	margin:10px;
+	margin:0;
 	padding:30px 0 0 20px;
-	border:0 solid #d0d0d0;
 	width:1000px;
 	min-height:800px;
 }
 
 div#maincontent div{
 	margin:0 0 0 0;
-	padding:0 0 0 30px;
+	padding:0 0 0 0px;
 	padding-bottom:0;
-	border:0;
 	border-bottom:1px solid #aaa;
 	width:950px;	
 	min-height:200px;
@@ -253,10 +252,12 @@ div#maincontent div{
 }
 div#maincontent div#m1{
 	min-height:500px;
+	border:0px solid #aaa;
+	border-bottom:1px solid #aaa;
 	
 }
 
-div#maincontent div#m1 div.imageRotation{
+div#maincontent  div.imageRotation{
 	margin:10px 0 0 100px;
 	height:550px;
 	width:570px;
@@ -315,12 +316,14 @@ div#m1 div.imageRotation div.icoBox{
 
 div#footer{
 	clear:both;
-	margin-top:30px;
-	padding:0 20px 30px 0;
-	border-top:1px solid #ccc;
+	margin:0 0 0 12px;
+	padding:0;
+	border-top:0 solid #ccc;
 	width:1210px;
 	font-family: PingFangSC-Regular, 'Î¢ÈíÑÅºÚ', Verdana, Arial, 'ËÎÌå';	
 	text-align:center;
+	background:transparent url("images/bg_footer.PNG") repeat-X;
+	min-height:80px;
 }
 
 h1 {

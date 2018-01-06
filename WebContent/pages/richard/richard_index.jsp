@@ -4,11 +4,11 @@
 
 <html>
 <head>
-<script type="text/javascript" src="../../jquery-3.2.1.js"></script>
+<title>文档系统</title>
 <meta http-equiv="Content-Type" content="text/html; charset=GB18030">
 <link rel="stylesheet" type="text/css" href="../../style.css">
-<title>文档系统</title>
-
+<script type="text/javascript" src="../../jquery-3.2.1.js"></script>
+<script type="text/javascript" src="../../script.js"></script>
 </head>
 <body>
 <div id="wrapper">
@@ -52,30 +52,53 @@
 </div>
 
 <div id="maincontent">
-<div id="m1"></div>
+<div id="m1">
+<p id="demo">test:
+<button type="button" onclick="for_out()">For output</button>
+
+<button id="b_test" type="button">b_test</button>
+</p>
+<script>
+
+function oo(){
+var o="",j;
+for(j=1;j<=6;j++)
+	{
+	o="<h"+j+">Henry<h"+j+">";
+	document.write(o);
+	}
+}
+oo();
+
+for_in();
+
+</script>
+</div>
+
+
 <div id="m2">
 
 <h2>Audio</h2>
-<p>
+<p style="text-indent:30px">
 <span>Until you:</span>
-<audio controls="controls">
+<audio style="margin-left:30px" controls="controls">
 <source src="../../media/audio1.mp3" type="audio/mpeg"></source>
 Your browser does not support HTML5 video.
 </audio>
 </p>
 
 <h2>Video</h2>
-<p><span>Bear1:</span></p>
+<p style="text-indent:30px"><span>Bear1:</span></p>
 <p>
-<video  width="320"  height="240" controls="controls">
+<video   style="margin-left:30px" width="320"  height="240" controls="controls">
 <source src="../../media/movie.ogg" type="video/ogg"></source>
 Your browser does not support HTML5 video.
 </video>
 </p>
 
-<p><span>Bear2:</span></p>
+<p style="text-indent:30px"><span>Bear2:</span></p>
 <p>
-<video  width="320"  height="240" controls="controls">
+<video  style="padding-left:30px" width="320"  height="240" controls="controls">
 <source src="../../media/mov_bbb.ogg" type="video/ogg"></source>
 Your browser does not support HTML5 video.
 </video>
@@ -101,8 +124,12 @@ document.write(Date());
 </script>
 </div>
 
-
-
 </div>
+
+<script type="text/javascript">
+b_test();
+</script>
+
+
 </body>
 </html>

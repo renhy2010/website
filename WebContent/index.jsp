@@ -4,12 +4,13 @@
 
 <html>
 <head>
-<script type="text/javascript" src="jquery-3.2.1.js"></script>
+<title>文档系统</title>
 <meta http-equiv="Content-Type" content="text/html; charset=GB18030">
 <link rel="stylesheet" type="text/css" href="style.css">
-<title>文档系统</title>
-
+<script type="text/javascript" src="jquery-3.2.1.js"></script>
+<script type="text/javascript" src="script.js"></script>
 </head>
+
 <body>
 <div id="wrapper">
 
@@ -74,7 +75,34 @@
 
 <div id="maincontent">
 <div id="m1">
-<h2>Family</h2>
+<h2>Form</h2>
+<form name="input" action="index.jsp" target="_blank" style="margin-left:100px">
+<fieldset style="width:450px">
+<legend style="font-weight:bold;">Personal Information</legend>
+<p>First Name:<input type="text" name="first_name" value="Richard" readonly /></p>
+<p>Last Name:<input type="text" name="last_name" ></input></p>
+<p>Adrress:<input type="text" name="address" autofocus></input></p>
+<p>TelNumber:<input type="text" name="address"></input><p>
+<p>Password:<input type="password" name="password"></input></p>
+<p>City:
+<select name="city">
+<option value="1">North York</option>
+<option value="2">Scrouboug</option>
+</select>
+</p>
+<p>TextArea:<textarea name="textarea" rows="3" cols="10"></textarea></p>
+<p>
+<button type="button" onclick="">button</button>
+<button type="button" onclick="alert('Please input Last Name and TelNumber')">alert</button>
+<button type="reset" name="reset">reset</button>
+<input type="submit" name="button" value="submit" style="margin-left:100px;font-weight:bold;font-size:16px;color:#000;background:#ccc;width:80px;height:30px;"></input>
+</p>
+</fieldset>
+</form>
+
+</div>
+<div id="m2">
+<h2>Animation</h2>
 <div class="imageRotation">
 <div class="imageBox">
 <a href="index.jsp" target="_blank"><img src="images/photos/family/1.jpg" /></a>
@@ -91,6 +119,63 @@
 <span rel="5">5</span>
 </div>
 </div>
+
+
+</div>
+
+<div id="m3">
+
+<h2>Audio</h2>
+<p style="text-indent:100px">
+<span>Until you:</span>
+<audio style="margin-left:10px" controls="controls">
+<source src="media/audio1.mp3" type="audio/mpeg"></source>
+Your browser does not support HTML5 video.
+</audio>
+</p>
+
+<h2>Video</h2>
+<p style="text-indent:100px"><span>Bear1:</span></p>
+<p>
+<video   style="margin-left:100px" width="320"  height="240" controls="controls">
+<source src="media/movie.ogg" type="video/ogg"></source>
+Your browser does not support HTML5 video.
+</video>
+
+</p>
+
+<p style="text-indent:100px"><span>Bear2:</span></p>
+<p>
+<video  style="margin-left:100px" width="320"  height="240" controls="controls">
+<source src="media/mov_bbb.ogg" type="video/ogg"></source>
+Your browser does not support HTML5 video.
+</video>
+</p>
+
+</div>
+<div id="m4">
+</div>
+<div id="m5">
+<p>
+<button type="button" onclick="alert('alert for m...')" >alert</button>
+<button type="button" onclick="confirm_m()" >confirm</button>
+<button type="button" onclick="prompt_m()">prompt</button>
+</p>
+</div>
+
+</div>
+
+<div id="footer">
+        Richard &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2017  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        
+<script>
+document.write(Date());
+</script>
+</div>
+
+</div>
+
+
 
 <script type="text/javascript">
 //$(document).ready(function(){
@@ -134,7 +219,6 @@ $(document).ready(function(){
 	}
 
 	 setIntervalID=setInterval(rotate,intervalTime);
-	
 	 
 
 	$(icoArr).click(function(){
@@ -149,63 +233,24 @@ $(document).ready(function(){
 	$(imageBox).hover(
 			function(){clearInterval(setIntervalID);},
 			function(){setIntervalID=setInterval(rotate,intervalTime);}
-			);
- 
-	
-	
+			);	
 	
 	});
 	
 });
+</script>
 
+<script type="text/javascript">
+/* output m5 and m4*/
+
+//show_m4();
+
+function show_m5(){
+	document.getElementById("m5").innerHTML="Test for m5...";
+}
 
 </script>
 
 
-</div>
-<div id="m2"></div>
-<div id="m3"></div>
-<div id="m4"></div>
-<div id="m5">
-<h1>TestPlan Document</h1>
-<p>
-<br/><br/>
-项目应用
-根据项目系统架构，性能测试覆盖的系统项目应用主要包括以下子系统（模块）：
-地址搜索，业务接口，业务配置,接口平台；
-流程平台，流程应用； 
-Telant资源应用；
-管线资源应用；
-缓存服务，消息服务，文件服务，日志服务，单点登录；
-
-其中，接入型自配，资源管理，接口平台，缓存服务为必测项；其他服务可以监测受必测服务所影响的情况；
-
-项目数据库
-每个应用都对应独立或者共用的数据库schema;数据库和资源项目生产环境共用服务器主机（P595），但为不同分区，应相互不影响。
-</p>
-<%
-   String name=request.getParameter("name");
-   String pwd=request.getParameter("password");   
-   out.print("name:"+name+",password:"+pwd);
-
-%>
-<button onclick="myFunction()">查询</button>
-
-
-</div>
-
-</div>
-
-<div id="footer">
-        Richard &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2017  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-        
-<script>
-document.write(Date());
-</script>
-</div>
-
-
-
-</div>
 </body>
 </html>
