@@ -16,7 +16,7 @@
 
 <div id="header">
 <div id="header_first">
-<a href="../../index.jsp" target="_blank"><img src="../../images/bg_header.jpg"/></a>
+<a href="../../index.jsp" target="_blank"><img src="../../images/bg_header.jpg"></a>
 </div>
 <div id="header_second">
 <h1 style="color:#000000;text-align:center;padding-top:25px"><b><a href="../../index.jsp">ÎÄµµÏµÍ³</a></b></h1>
@@ -53,10 +53,44 @@
 
 <div id="maincontent">
 <div id="m1">
-<p id="demo">test:
-<button type="button" onclick="for_out()">For output</button>
+<script>
+onerror=myhandleErr;
+function myhandleErr(msg,url,l,m,n,p){
+	var txt="";
+	txt=msg+"\n"+url+"\n"+l+"\n"+m+"\n"+n+"\n"+p;
+	alert(txt);
+    return true;
+	
+}
 
+function myalert()
+{
+/*	var val;
+
+	try{
+		val=5;
+		if(val<=10) throw  "x is too large...";
+
+	}
+	catch(err){
+		
+		alert("Error happened...");
+		
+	}
+*/	
+	alert("Error happened...");
+	}
+
+
+
+
+</script>
+
+<p id="demo">test:
+<img src="../../images/photos/richard/1.jpg" style="width:300px;height:300px;"></img>
+<button type="button" onclick="for_out()">For output</button>
 <button id="b_test" type="button">b_test</button>
+<button type="button" onclick="myalert()">onerror</button>
 </p>
 <script>
 
@@ -126,10 +160,36 @@ document.write(Date());
 
 </div>
 
-<script type="text/javascript">
-b_test();
+<script>
+function myerr()
+{
+ 
+    
+    function handleErr(msg,url,l){
+    	var txt="";
+    	txt=msg+url+l;
+    	alert(txt);
+        return true;
+    	
+    }
+    
+   handleErr("error:",document.location.href,96);
+    
+}
 </script>
 
+<script type="text/javascript">
+try{
+	b_test();
+	}
+	catch(err){
+		var msg="one err happend";
+		if(confirm(msg)){
+			document.location.href="http://localhost:8080/rweb/index.jsp";
+		}
+	}
+
+</script>
 
 </body>
 </html>

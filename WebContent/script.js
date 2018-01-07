@@ -61,3 +61,12 @@ function for_in(){
 }
 
 	
+
+function setCookie(cname,cvalue,expdays){
+	var c=cname+"="+cvalue;
+	var d=new Date();
+	d.setTime(d.getTime()+expdays*24*60*60);
+	var exp="expires="+d.toGMTString();
+	document.cookie=c+";"+exp;	
+	
+}
