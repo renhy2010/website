@@ -92,6 +92,23 @@ function myalert()
 <button id="b_test" type="button">b_test</button>
 <button type="button" onclick="myalert()">onerror</button>
 </p>
+œ‘ æ ±º‰:<input type="text" id="txt"></input>
+<p>
+Cookie:
+<script>
+setCookie("username","Richard",1);
+
+document.write(document.cookie);
+
+document.write(getCookie("username"));
+
+// setTimeout(function(){checkCookie()},3000);
+
+timedTxt();
+
+</script>
+</p>
+
 <script>
 
 function oo(){
