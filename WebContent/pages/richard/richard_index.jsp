@@ -90,9 +90,11 @@ function myalert()
 <img src="../../images/photos/richard/1.jpg" style="width:300px;height:300px;"></img>
 <button type="button" onclick="for_out()">For output</button>
 <button id="b_test" type="button">b_test</button>
-<button type="button" onclick="myalert()">onerror</button>
+<button type="button" onclick="start_myTime()">start Timer</button>
+<button type=button" onclick="stop_myTime()">stop Timer</button>
+<button type="button" onclick="my_clock()">my clock</button>
 </p>
-显示时间:<input type="text" id="txt"></input>
+显示时间:<input type="text" id="myTime" value="test"></input>
 <p>
 Cookie:
 <script>
@@ -104,7 +106,7 @@ document.write(getCookie("username"));
 
 // setTimeout(function(){checkCookie()},3000);
 
-timedTxt();
+//timedTxt();
 
 </script>
 </p>
@@ -124,6 +126,8 @@ oo();
 for_in();
 
 </script>
+
+
 </div>
 
 

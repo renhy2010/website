@@ -1,11 +1,45 @@
-	
+	var c=0;
+	var timer_is_on=0; 
+	var t;
+function show_myTime(){
+      
+    		document.getElementById("myTime").value=c;
+    		c=c+1;
+    		t=setTimeout(show_myTime,1000);
+      
+
+}
+
+function start_myTime(){
+	if(!timer_is_on){
+		show_myTime();
+		timer_is_on=1;
+	}	
+}
+
+function stop_myTime(){
+	if(timer_is_on) clearTimeout(t);
+	timer_is_on=0;
+		
+}
+
+function my_clock(){
+	var date=new Date();
+	var h=date.getHours();
+	var m=date.getMinutes();
+	var s=date.getSeconds();
+	document.getElementById("myTime").value=h+":"+m+":"+s;
+	setTimeout(my_clock,500);
+}
+
+
+
 function b_test(){
 	document.getElementById("b_test").onclick=function(){
 		document.getElementById("demo").innerHTML="hello...";
 	};
 	
 }
-
 
 function show_m4(){
 	document.getElementById("m4").innerHTML="Testing from script.cs!";
@@ -108,3 +142,4 @@ function timedTxt(){
 	setTimeout(function(){x.value=4;},4000);
 	setTimeout(function(){x.value=6},6000);
 }
+
